@@ -96,7 +96,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if config["users"].get(username) == password:
                 print(f"Authentication success from {addr}: (\"{username}\", \"{password}\") ")
                 permit_ip(addr[0])
-                c.send("Accepted!")
+                c.send(b"Accepted!")
             else:
                 print(f"Authentication failure from {addr}: (\"{username}\", \"{password}\") ")
             c.close()
@@ -110,6 +110,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if password == config["password"]:
                 print(f"Authentication success from {addr}: \"{password}\"")
                 permit_ip(addr[0])
+                c.send(b"Accepted!")
             else:
                 print(f"Authentication failure from {addr}: \"{password}\"")
             c.close()
