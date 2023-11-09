@@ -1,0 +1,16 @@
+{
+    "portsec-port": 1499,
+    "mode": "usernamepassword",
+    "users": {
+        "sawntoe": "password"
+    },
+    "allow_internal": false,
+    "handle_blocked": "DROP",
+    "allow": [
+        ["--protocol", "tcp", "--dport", "22"]
+    ],
+    "failopen": false,
+    "failallow": [
+        ["--protocol", "tcp", "--dport", "22"]
+    ]
+}
