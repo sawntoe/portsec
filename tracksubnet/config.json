@@ -1,0 +1,25 @@
+{
+    "rules": [
+        {
+            "rule": "log",
+            "type": "raw",
+            "data": {
+                "protocol": "udp",
+                "source": "27.125.180.208",
+                "log-level": 4,
+                "log-prefix": "*** LOG ***"
+            }
+        },
+        {
+            "rule": "ban",
+            "type": "exp",
+            "data": {
+                "protocol": "tcp"
+            },
+            "match": {
+                "type": "cn",
+                "data": "US"
+            }
+        }
+    ]
+}

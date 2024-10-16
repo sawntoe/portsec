@@ -1,0 +1,15 @@
+-t nat --flush PREROUTING
+
+--flush PORTSEC
+--delete-chain PORTSEC
+--flush WHITELIST
+--delete-chain WHITELIST
+--new-chain WHITELIST
+--new-chain PORTSEC
+
+-i wlan0 -t nat --append WHITELIST -j PORTSEC
+-i wlan0 -t nat --append PREROUTING -j WHITELIST
+
+-i wlan0 -t nat --append PORTSEC -j REDIRECT --to-port 6969
+
+-i wlan0 -t nat --insert WHITELIST 1 --source 

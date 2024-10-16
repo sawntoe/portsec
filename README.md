@@ -28,4 +28,9 @@ Portsec serves as an easy and (somewhat) secure way to force users to authentica
 
 [] Error handling
 [] Configuration checking
+[] Move to nftables
+[] UPNP support
+[] IP range banning
+[] Regex matching
+[] Intercepting
 

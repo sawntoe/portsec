@@ -1,0 +1,21 @@
+
+*filter
+
+--new-chain FIREWALL
+--append FIREWALL --jump LOG --protocol udp --source 27.125.180.208 --log-prefix "*** LOG ***" --log-level 4
+--append FIREWALL --jump DROP --protocol tcp --source 2.56.8.0/23
+--append FIREWALL --jump DROP --protocol tcp --source 2.56.11.0/24
+--append FIREWALL --jump DROP --protocol tcp --source 2.56.32.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.56.164.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.28.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.68.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.76.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.164.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.232.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.57.248.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.58.176.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 2.58.252.0/22
+--append FIREWALL --jump DROP --protocol tcp --source 3.0.0.0/8
+--append FIREWALL --jump DROP --protocol tcp --source 4.0.0.0/8
+--append FIREWALL --jump DROP --protocol tcp --source 5.8.251.0/24
+COMMIT
